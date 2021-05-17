@@ -1,0 +1,117 @@
+"""Number::"""
+
+print("17 / 3 : " + str(17 / 3))  # classic division returns a float
+print("17 // 3 : " + str(17 // 3))  # floor division discards the fractional part
+print("17 % 3 : " + str(17 % 3))  # the % operator returns the remainder of the division
+print("result * divisor + remainder: " + str(5 * 3 + 2))  # result * divisor + remainder
+
+print("Square of 5 is ", 5 ** 2)
+
+tax = 12.5 / 100
+price = 100.50
+
+print(tax * price)
+i = 256 * 256
+print('The value of i is', i)
+
+# Octal number
+'''
+If an integer number is preceded by an 0O or 0o prefix (zero-o), 
+it will be treated as an octal value. This means that the number must contain 
+digits taken from the [0..7] range only.
+
+0o123 is an octal number with a (decimal) value equal to 83.
+'''
+
+print('Octal No: ', 0o123)
+
+# Hexadecimal Number
+
+'''
+The second allows us to use hexadecimal numbers. Such numbers should be preceded 
+by the prefix 0x or 0X (zero-x).
+
+0x123 is a hexadecimal number with a (decimal) value equal to 291.
+'''
+
+print('Hexadecimal Number: ', 0X123)
+
+"""Float::"""
+
+'''
+The letter E (you can also use the lower-case letter e – it comes from the word 
+exponent) is a concise record of the phrase times ten to the power of.
+Note:
+the exponent (the value after the E) has to be an integer;
+the base (the value in front of the E) may be an integer.
+'''
+
+print('Float 3E8 value: ', 3E8)
+
+"""Strings"""  # ////////////////////////////////////////////////////////////////////////////////////
+
+print('spam eggs')  # single quotes
+print('doesn\'t')  # use \' to escape the single quote...
+print("doesn't")  # ...or use double quotes instead
+print('C:\some\name')  # here \n means newline!
+print(r'C:\some\name')  # note the r (raw string) before the quote
+
+# String literals can span multiple lines. One way is using triple-quotes: """...""" or '''...'''.
+print("""\
+Usage: thingy [OPTIONS]
+     -h                        Display this usage message
+     -H hostname               Hostname to connect to\
+""")
+
+print(3 * 'un' + 'ium')
+
+text = ('Put several strings within parentheses ' 'to have them joined together.')
+print(text)
+
+word = 'Python'
+
+word.casefold()
+
+print(word[0])  # character in position 0
+print(word[-1])  # last character
+print(word[0:2])  # characters from position 0 (included) to 2 (excluded)
+print(word[2:5])  # characters from position 2 (included) to 5 (excluded)
+
+# However, out of range slice indexes are handled gracefully when used for slicing:
+print(word[4:42])
+print(word[42:])
+
+# word[0] = 'J'  # Python strings cannot be changed — they are immutable.
+
+s = 'supercalifragilisticexpialidocious'
+print("Length: " + str(len(s)))
+
+# Lists : /////////////////////////////////////////////////////////
+
+squares = [1, 4, 9, 16, 25]
+
+print(squares[0])  # indexing returns the item
+
+print(squares[-1])
+
+print(squares[-3:-1])  # slicing returns a new list
+
+#  Lists are a mutable type, i.e. it is possible to change their content:
+
+
+cubes = [1, 8, 27, 65, 125]  # something's wrong here
+4 ** 3  # the cube of 4 is 64, not 65!
+
+cubes[3] = 64  # replace the wrong value
+print(cubes)
+cubes.append(261)  # add the cube of 6
+cubes.append(7 ** 3)
+print(cubes)
+
+#  It is possible to nest lists (create lists containing other lists), for example:
+a = ['a', 'b', 'c']
+n = [1, 2, 3]
+x = [a, n]
+print(x)
+print(x[1])
+print
